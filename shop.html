@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop premium handmade crochet products from Rwanda — bags, clothing, hats, accessories, and home decor.">
+  <title>Shop | Made in Rwanda Crochet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-main">Made in Rwanda Crochet</span>
+        <span class="logo-tag">Handcrafted with Love</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link active">Shop</a>
+        <a href="about.html" class="nav-link">Our Story</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Our Collection</span>
+      <h1>Shop Handmade Crochet</h1>
+      <p>Every piece is uniquely crafted by skilled Rwandan artisans using premium materials and cultural inspiration.</p>
+    </div>
+  </section>
+
+  <div class="container shop-layout">
+    <aside class="shop-filters">
+      <h3>Categories</h3>
+      <div class="filter-group">
+        <label><input type="checkbox" value="bags"> Bags</label>
+        <label><input type="checkbox" value="clothing"> Clothing</label>
+        <label><input type="checkbox" value="hats"> Hats</label>
+        <label><input type="checkbox" value="accessories"> Accessories</label>
+        <label><input type="checkbox" value="home-decor"> Home Decor</label>
+      </div>
+      <h3>Price Range</h3>
+      <div class="filter-group">
+        <label><input type="checkbox" value="under-25"> Under $25</label>
+        <label><input type="checkbox" value="25-50"> $25 – $50</label>
+        <label><input type="checkbox" value="over-50"> Over $50</label>
+      </div>
+    </aside>
+
+    <main>
+      <div class="shop-toolbar">
+        <span class="shop-count" id="productCount">12 products</span>
+        <div class="shop-sort">
+          <select id="sortSelect" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="name">Name: A to Z</option>
+          </select>
+        </div>
+      </div>
+      <div class="products-grid" id="shopProducts">
+        <!-- Products loaded by JS -->
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-main">Made in Rwanda Crochet</div>
+          <div class="logo-tag">Handcrafted with Love</div>
+          <p>Premium handmade crochet fashion and lifestyle products, crafted with creativity and cultural inspiration in the heart of Rwanda.</p>
+        </div>
+        <div>
+          <h4>Shop</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=bags">Bags</a></li>
+            <li><a href="shop.html?category=clothing">Clothing</a></li>
+            <li><a href="shop.html?category=hats">Hats</a></li>
+            <li><a href="shop.html?category=accessories">Accessories</a></li>
+            <li><a href="shop.html?category=home-decor">Home Decor</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li>Kigali, Rwanda</li>
+            <li><a href="mailto:hello@madeinrwandacrochet.com">hello@madeinrwandacrochet.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Made in Rwanda Crochet. All rights reserved.</span>
+        <span>Handmade with ♥ in Rwanda</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close" id="cartClose" aria-label="Close cart">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty">Your cart is empty</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">$0.00</span>
+      </div>
+      <button class="btn btn-primary" id="checkoutBtn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
